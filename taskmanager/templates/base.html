@@ -21,7 +21,7 @@
     <header>
         <!--top navbar-->
         <nav class="light-blue darken-1">
-            <div class="nav-wrapper">
+            <div class="nav-wrapper container">
                 <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
@@ -40,7 +40,7 @@
         </ul>
     </header>
 
-    <main>
+    <main class="container">
         {% block content %}
         {% endblock %}
     </main>
