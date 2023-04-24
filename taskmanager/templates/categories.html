@@ -7,8 +7,24 @@
         <div class="col s12 center-align">
             <a href="{{ url_for('add_category') }}"
                class="btn-large light-blue darken-2">Add Category
-{#                <i class="material-icons">add</i>#}
+                {#                <i class="material-icons">add</i>#}
             </a>
         </div>
+    </div>
+
+    <div class="row">
+        {% for category in categories %}
+            <div class="col s12 m6 l3">
+                <div class="card light-blue darken-4 center-align">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{ category.category_name }}</span>
+                    </div>
+                    <div class="card-action">
+                        <a class="btn green accent-4" href="#">Edit</a>
+                        <a class="btn red" href="#">Delete</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
